@@ -1,0 +1,1 @@
+[![.github/workflows/deploy.yml](https://github.com/SashaSavin/product-card/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/SashaSavin/product-card/actions/workflows/deploy.yml)
