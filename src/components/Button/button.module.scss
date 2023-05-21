@@ -1,0 +1,45 @@
+$button-width: 320px;
+$button-height: 55px;
+$button-border-radius: 8px;
+$button-padding: 5px;
+$button-font-style: normal;
+$button-font-weight: 400;
+$button-font-size: 20px;
+$button-line-height: 28px;
+$button-cursor: pointer;
+$button-border-color: #61a5fa;
+$button-background-color: #fbbf23;
+
+@mixin button($bg-color) {
+  width: $button-width;
+  height: $button-height;
+  border-radius: $button-border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: $button-padding;
+  padding-right: $button-padding;
+  font-style: $button-font-style;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  cursor: $button-cursor;
+  background-color: $bg-color;
+}
+
+.outlined {
+  @include button(transparent);
+  border: 1px solid $button-border-color;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.base {
+  @include button($button-background-color);
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
