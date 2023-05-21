@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const basePath = process.env.NODE_ENV === "production" ? "/card-demo" : ""
+// const basePath = "/card-demo"
 
 const nextConfig = {
-  basePath,
-  assetPrefix: `${basePath}/`,
+  // basePath,
+  // assetPrefix: `${basePath}/`,
   reactStrictMode: true,
   // output: "export",
   images: { unoptimized: true },
