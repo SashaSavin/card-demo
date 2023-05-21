@@ -23,5 +23,6 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          npm run predeploy
+          npm run build
+          npm run export
           npm run deploy
