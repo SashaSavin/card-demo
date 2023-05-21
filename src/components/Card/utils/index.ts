@@ -11,11 +11,11 @@ export const colorObj: Colors = {
 export const getImageByColor = (color: string) => {
   switch (color) {
     case colorObj.red:
-      return "./images/image_red.png"
+      return "images/image_red.png"
     case colorObj.blue:
-      return "./images/image_blue.png"
+      return "images/image_blue.png"
     case colorObj.black:
-      return "./images/image_black.png"
+      return "images/image_black.png"
     default:
       return ""
   }
