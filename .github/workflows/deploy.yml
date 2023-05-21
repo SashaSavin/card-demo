@@ -1,28 +1,33 @@
-name: Deploy to GitHub Pages
+name: Deploy to Github Pages
 
 on:
   push:
     branches:
       - main
 
+  workflow_dispatch:
+
 jobs:
-  deploy:
+  deployment:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: "lts/*"
+          cache: "npm"
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build and Deploy
+      - name: Build
         run: |
+          npm i
           npm run build
           npm run export
-          npm run deploy
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
