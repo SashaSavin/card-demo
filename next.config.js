@@ -8,7 +8,7 @@ const nextConfig = {
   // basePath,
   assetPrefix: basePath ? "/card-demo/" : "",
   reactStrictMode: true,
-  // output: "export",
+  output: "export",
   images: { unoptimized: true },
 }
 
